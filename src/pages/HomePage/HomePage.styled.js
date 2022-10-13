@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 
 
 export const Welcome=styled.div`
@@ -24,15 +24,3 @@ export const Welcome=styled.div`
     }
 `
 
-export const PLink = styled(Link)`
-    
-    color: #1F4E49;
-    outline: none;
-    cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    :hover,
-    :focus {
-         color: #FF931E;
-    }
-`

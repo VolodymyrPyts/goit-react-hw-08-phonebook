@@ -1,13 +1,11 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-
-export const UserNav = styled.div`
+export const NavMenu = styled.nav`
     display: flex;
     gap:8px;
-    align-items: center;
-    color: #1F4E49;
-    `
-export const Button = styled.button`
+`
+export const NavItem = styled(NavLink)`
     padding: 4px;
     background-color: #1F4E49;
     color: #F2F2F2;
@@ -23,12 +21,9 @@ export const Button = styled.button`
         background-color: #FF931E;
         color: #1F4E49;
     }
-`
 
-export const UserLabel = styled.span`
-    display: block;
-    padding-right:  8px;
-    font-size: medium;
-    font-weight: 700;
-    
- `
+    &.active {
+        background-color: #FF931E;
+        color: #1f4e49;
+    }
+`

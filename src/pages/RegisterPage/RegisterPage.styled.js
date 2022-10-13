@@ -1,20 +1,18 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
     justify-content: center;
     background-color: #F2F2F2;
-    padding: 8px;
+    padding: 16px;
     border: 1px solid #CCEBE8;
     color: #1F4E49;
 `
 
-
 export const Form = styled.form`
     display: inline-block;
-    padding: 8px;
     background-color: #F2F2F2;
-    text-align: center;    
+    text-align: center;
 `
 
 export const Label=styled.label`
@@ -29,10 +27,10 @@ export const Label=styled.label`
 
 export const Input=styled.input`
     border:1px solid #1F4E4950;
-    border-radius: 0;
     color: #1F4E49;
     font-size: medium;
     outline: none;
+    border-radius: 0;
 
     :hover,
     :focus{
@@ -41,12 +39,13 @@ export const Input=styled.input`
 `
 
 export const Button = styled.button`
-    margin-top: 8px;
+    margin-top: 12px;
     padding: 4px;
+    justify-self: center;
     background-color: #1F4E49;
     color: #F2F2F2;
     border:none;
-    font-size: small;
+    font-size: medium;
     outline: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
