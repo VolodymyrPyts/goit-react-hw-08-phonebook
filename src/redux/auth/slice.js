@@ -1,11 +1,10 @@
-import { createSlice, isAnyOf, isFulfilled } from '@reduxjs/toolkit';
-
 import {
   userLogin,
   userLogout,
   userRegister,
   userGetCurrent,
 } from './operation';
+import { createSlice, isAnyOf, isFulfilled } from '@reduxjs/toolkit';
 
 const userInitState = {
   user: { name: null, email: null },

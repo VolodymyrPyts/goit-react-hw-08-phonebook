@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { userRegister } from "redux/auth/operation";
-import { Button, Container, Form, Input, Label } from "./RegistrationPage.styled"
+import { Button, Container, Form, Input, Label } from "./RegisterPage.styled"
 
-const RegistrationPage = () => {
+const RegisterPage = () => {
 
   const dispatch = useDispatch();
   
@@ -41,4 +41,4 @@ const RegistrationPage = () => {
     )
   }
 
-export default RegistrationPage;
+export default RegisterPage;
