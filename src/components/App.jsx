@@ -1,17 +1,33 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { selectIsRefreshing } from 'redux/auth/selectors';
+import { userGetCurrent } from 'redux/auth/operation';
+import { Loader } from "./Loader/Loader";
+
 import { Box } from 'components/theme/Box';
 import { FormAddContact } from './FormAddContact/FormAddContact';
 import { ContactCard } from './ContactCard/ContactCard';
 import { FilterContact } from './FilterContact/FilterContact';
-import { Loader } from "./Loader/Loader";
+import { SharedLoaut } from "./SharedLoaut/SharedLoaut";
 
 import { TitleStyle } from './FormAddContact/FormAddContact.styled';
-import { useFetchContactsQuery } from 'redux/contactSlice';
+import { Route, Routes } from 'react-router-dom';
+
 
 export const App = () => {
 
-  const { data: contacts, isFetching } = useFetchContactsQuery();
+  const dispatch = useDispatch();
+  useEffect(()=> {
+  dispatch(userGetCurrent())
+}, [dispatch]);
 
-    return (
+    return useSelector(selectIsRefreshing)
+    ?<Loader/>
+    : (<Routes>
+      <Route path='/' element={<SharedLoaut />}/>
+    </Routes>)
+     (
       <>
         <TitleStyle>Phonebook </TitleStyle>
         <Box display="flex" height="100vh" width="100vw">
