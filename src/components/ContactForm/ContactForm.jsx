@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Input, Label, Button, Form, Container } from "./ContactForm.styled";
 import { useDispatch, useSelector } from "react-redux";
+
 import { addNewContact } from "redux/contacts/operations";
 import { selectContacts } from "redux/contacts/selectors";
+
+import { Container, Form, Label, Input, Button } from "pages/RegisterPage/RegisterPage.styled";
 
 export const ContactForm = ()=> {
   const [name, setName] = useState('');

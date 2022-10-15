@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
-import { MdOutlineBrokenImage } from "react-icons/md";
+import { TbFaceIdError } from 'react-icons/tb';
 import { BadRequestWrapper } from "./BadRequest.styled";
 
 export const BadRequest = ({children}) => {
     return (
         <BadRequestWrapper>
             <p>{children}</p>
-            <MdOutlineBrokenImage size={60} />
+            <TbFaceIdError size={64} />
         </BadRequestWrapper>
     )
 }

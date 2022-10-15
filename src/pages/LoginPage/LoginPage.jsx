@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { userLogin } from "redux/auth/operation";
-import {Container, Form, Label, Input, Button } from "./LoginPage.styled";
-
+import {Container, Form, Label, Input, Button } from "../RegisterPage/RegisterPage.styled";
 const LoginPage = () => {
   const dispatch = useDispatch();
   

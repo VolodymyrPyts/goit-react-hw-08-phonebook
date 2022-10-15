@@ -8,5 +8,5 @@ export const BadRequestWrapper=styled.div`
     text-align:center;
     font-size: 18px ;
     font-weight: 700;
-    color: #1F4E49;
+    color: #444444;
 `

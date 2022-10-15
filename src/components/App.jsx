@@ -1,11 +1,12 @@
 
 import { Route, Routes } from "react-router-dom";
-import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { lazy, useEffect } from "react";
+
 import { userGetCurrent } from "redux/auth/operation";
 import { selectIsRefreshing } from "redux/auth/selectors";
 import { Loader } from "./Loader/Loader";
+import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 

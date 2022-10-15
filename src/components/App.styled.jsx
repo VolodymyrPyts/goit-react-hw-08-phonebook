@@ -9,8 +9,8 @@ export const Container = styled.div`
   h1,
   h2{
     padding: 8px;
-    background-color:#CCEBE8;
-    color:#1F4E49;
+    background-color:#ffffff;
+    color:#444444;
   }
 `
 

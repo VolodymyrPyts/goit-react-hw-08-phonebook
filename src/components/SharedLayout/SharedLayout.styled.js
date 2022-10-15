@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   h1 {
     padding: 8px;
-    color:#1F4E49;
+    color:#444444
   }
 `
 
@@ -15,5 +15,5 @@ export const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#CCEBE8;
+    background-color:#ffffff;
 `
