@@ -1,4 +1,4 @@
-import { fetchContacts, addNewContact, removeContact } from './operations';
+import { fetchContacts, addNewContact, deleteContact } from './operations';
 import {
   createSlice,
   isAnyOf,
@@ -14,7 +14,7 @@ const contactsInitState = {
   error: null,
 };
 
-const requestActions = [fetchContacts, addNewContact, removeContact];
+const requestActions = [fetchContacts, addNewContact, deleteContact];
 const isPendingActions = isPending(...requestActions);
 const isFulfilledActions = isFulfilled(...requestActions);
 const isRejectedActions = isRejected(...requestActions);
@@ -36,7 +36,7 @@ const contactsSlice = createSlice({
       .addCase(addNewContact.fulfilled, (state, action) => {
         state.items.push(action.payload);
       })
-      .addCase(removeContact.fulfilled, (state, action) => {
+      .addCase(deleteContact.fulfilled, (state, action) => {
         const index = state.items.findIndex(c => c.id === action.payload);
         state.items.splice(index, 1);
       })
