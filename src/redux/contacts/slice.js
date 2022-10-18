@@ -37,8 +37,7 @@ const contactsSlice = createSlice({
         state.items.push(action.payload);
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
-        const index = state.items.findIndex(c => c.id === action.payload);
-        state.items.splice(index, 1);
+        state.items = state.items.filter(c => c.id !== action.payload);
       })
       .addMatcher(isAnyOf(isFulfilledActions), state => {
         state.isLoading = false;
